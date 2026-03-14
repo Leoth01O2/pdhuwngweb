@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Leoth</title>
+
+<link rel="stylesheet" href="css/site.css">
+
+</head>
+
+<body>
+
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<nav class="navbar">
+<a href="#home">Home</a>
+<a href="#music">Music</a>
+<a href="#gallery">Gallery</a>
+<a href="#guestbook">Guestbook</a>
+</nav>
+
+
+<div class="now-playing">
+
+<span class="np-label">
+Now Playing 🎧
+</span>
+
+<span id="nowPlayingTitle">
+Nothing
+</span>
+
+</div>
+
+
+<section id="home" class="section">
+
+<img src="images/avatar.jpg" class="avatar">
+
+<h1>PhanDuyHưng(Leoth)</h1>
+
+<p class="quote">
+A small digital corner on the internet.<br>
+Leoth01O2
+</p>
+
+<div class="links">
+<a href="https://www.facebook.com/y5dw7ug2hn0u/">Facebook</a>
+<a href="https://github.com/Leoth01O2">GitHub</a>
+<a href="http://www.linkedin.com/in/phanhuwngleoth">LinkedIn</a>
+</div>
+
+</section>
+
+
+<section id="music" class="section">
+
+<h2>Favourite Music</h2>
+
+<div class="music-box">
+    <div class="music-list">
+            <!-- bài nhạc -->
+            <div class="music-item">
+
+                <button class="play-btn"
+                        onclick="toggleMusic('music1', this)"
+                        data-title="Head In The Clouds - Hayd">
+                    ▶
+                </button>
+
+                <div class="music-content">
+
+                    <div class="music-title">
+
+                        <span class="scroll-text">
+                            Head In The Clouds - Hayd
+                        </span>
+
+                        <span class="music-wave">
+                            ♫♫♫
+                        </span>
+
+                    </div>
+
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+
+                </div>
+
+                <a class="music-link"
+                   href="https://youtu.be/-uFQzcY7YHc?si=kYvTQZzvfE1eHB8h"
+                   target="_blank">
+                    ↗
+                </a>
+
+                <audio id="music1"
+                       src="music/head_in_the_clouds.mp3"> </audio>
+            </div>
+
+            <!-- MUSIC ITEM -->
+            <div class="music-item">
+                <button class="play-btn" onclick="toggleMusic('music2', this)" data-title="Cỏ Dại Và Hoa Dành Dành - Đặng Thanh Tuyền">▶</button>
+
+                <div class="music-content">
+                    <div class="music-title">
+                        <span class="scroll-text">Cỏ Dại Và Hoa Dành Dành - Đặng Thanh Tuyền</span>
+                        <span class="music-wave">♫♫♫</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress"></div></div>
+                </div>
+
+                <a class="music-link" href="https://youtu.be/bFzM6XQn-zQ?si=4O8x5UzGs6iyonzm" target="_blank">↗</a>
+
+                <audio id="music2" src="music/coDaiVaHoaDanhDanh.mp3"></audio>
+            </div>
+            <!-- MUSIC ITEM -->
+            <div class="music-item">
+                <button class="play-btn" onclick="toggleMusic('music3', this)" data-title="Hngle - KHÔNG BUÔNG ft. Ari">▶</button>
+
+                <div class="music-content">
+                    <div class="music-title">
+                        <span class="scroll-text">Hngle - KHÔNG BUÔNG ft. Ari</span>
+                        <span class="music-wave">♫♫♫</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress"></div></div>
+                </div>
+
+                <a class="music-link" href="https://youtu.be/9UcQ7ddVjoc?si=UBAeZ73yLcTjmB4T" target="_blank">↗</a>
+
+                <audio id="music3" src="music/KhongBuong.mp3"></audio>
+            </div>
+            <!-- MUSIC ITEM -->
+            <div class="music-item">
+                <button class="play-btn" onclick="toggleMusic('music4', this)" data-title="CÓ AI HẸN HÒ CÙNG EM CHƯA - QUÂN A.P">▶</button>
+
+                <div class="music-content">
+                    <div class="music-title">
+                        <span class="scroll-text">CÓ AI HẸN HÒ CÙNG EM CHƯA - QUÂN A.P</span>
+                        <span class="music-wave">♫♫♫</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress"></div></div>
+                </div>
+
+                <a class="music-link" href="https://youtu.be/zHDECJy0p7k?si=FdpQcgyORd0Crv4G" target="_blank">↗</a>
+
+                <audio id="music4" src="music/CoAiHenHoCungEmChua.mp3"></audio>
+            </div>
+            <!-- MUSIC ITEM -->
+            <div class="music-item">
+                <button class="play-btn" onclick="toggleMusic('music5', this)" data-title="Chờ Anh Nhé (feat. Hoàng Rob)">▶</button>
+
+                <div class="music-content">
+                    <div class="music-title">
+                        <span class="scroll-text">Chờ Anh Nhé (feat. Hoàng Rob)</span>
+                        <span class="music-wave">♫♫♫</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress"></div></div>
+                </div>
+
+                <a class="music-link" href="https://youtu.be/0chK12qHGfM?si=aVJz4QdIKkV-Oakj" target="_blank">↗</a>
+
+                <audio id="music5" src="music/ChoAnhNhe.mp3"></audio>
+            </div>
+            <!-- MUSIC ITEM -->
+            <div class="music-item">
+                <button class="play-btn" onclick="toggleMusic('music6', this)" data-title="Em Ơi Sau Này (2024 Version) · Trid Minh">▶</button>
+
+                <div class="music-content">
+                    <div class="music-title">
+                        <span class="scroll-text">Em Ơi Sau Này (2024 Version) · Trid Minh</span>
+                        <span class="music-wave">♫♫♫</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress"></div></div>
+                </div>
+
+                <a class="music-link" href="https://youtu.be/ZIYNCIonqM4?si=kOVlCTVwZbXdoIMZ" target="_blank">↗</a>
+
+                <audio id="music6" src="music/EmOiSauNay.mp3"></audio>
+            </div>
+            <!-- MUSIC ITEM -->
+            <div class="music-item">
+                <button class="play-btn" onclick="toggleMusic('music7', this)" data-title="HOÀNG DŨNG - ĐOẠN KẾT MỚI">▶</button>
+
+                <div class="music-content">
+                    <div class="music-title">
+                        <span class="scroll-text">HOÀNG DŨNG - ĐOẠN KẾT MỚI</span>
+                        <span class="music-wave">♫♫♫</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress"></div></div>
+                </div>
+
+                <a class="music-link" href="https://youtu.be/cX2uLlc0su4?si=cflRMq9OsJCep7s5" target="_blank">↗</a>
+
+                <audio id="music7" src="music/DoanKetMoi.mp3"></audio>
+            </div>
+            <!-- MUSIC ITEM -->
+            <div class="music-item">
+                <button class="play-btn" onclick="toggleMusic('music8', this)" data-title="Nàng Thơ - Hoàng Dũng">▶</button>
+
+                <div class="music-content">
+                    <div class="music-title">
+                        <span class="scroll-text">Nàng Thơ - Hoàng Dũng</span>
+                        <span class="music-wave">♫♫♫</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress"></div></div>
+                </div>
+
+                <a class="music-link" href="https://youtu.be/Zzn9-ATB9aU?si=AUElRP9L1whj3d9X" target="_blank">↗</a>
+
+                <audio id="music8" src="music/NangTho.mp3"></audio>
+            </div>
+            <!-- MUSIC ITEM -->
+            <div class="music-item">
+                <button class="play-btn" onclick="toggleMusic('music99', this)" data-title="Cỏ Dại Và Hoa Dành Dành - Nhạc Ballad Cover 2026 | Những Bản Hits Nhạc Trẻ Triệu View">▶</button>
+
+                <div class="music-content">
+                    <div class="music-title">
+                            <span class="scroll-text">Nhạc Ballad Cover 2026 - Những Bản Hits Nhạc Trẻ Triệu View</span>
+                        <span class="music-wave">♫♫♫</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress"></div></div>
+                </div>
+
+                <a class="music-link" href="https://youtu.be/KIOfF6R6dOY?si=_IwV9e58w0Z6WMsh" target="_blank">↗</a>
+
+                <audio id="music99" src="music/ListCoDaiVaHoaDD.mp3"></audio>
+            </div>
+
+            <!---->
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="gallery" class="section">
+
+<h2>Gallery</h2>
+
+<div class="gallery-grid">
+
+<img src="images/minecraftWithFriend.png" onclick="openImage(this)">
+<img src="images/fishTank.jpg" onclick="openImage(this)">
+<img src="images/countryside.jpg" onclick="openImage(this)">
+<img src="images/sky.jpg" onclick="openImage(this)">
+
+</div>
+
+</section>
+
+
+<div id="imageViewer" onclick="closeImage()">
+<img id="viewerImg">
+</div>
+
+
+<section id="guestbook" class="section">
+
+<div class="guestbook-box">
+
+<h2>Say Anything</h2>
+
+<form id="guestForm"
+action="https://docs.google.com/forms/d/e/1FAIpQLSeU1Yl2cbFOTRIWpnM7Y98Z0n4Wi_SCYGDucdmwYpLJ9N9D7Q/formResponse"
+method="POST"
+target="hidden_iframe"
+onsubmit="return checkGuestForm()"
+novalidate>
+
+<input type="text"
+name="entry.523809736"
+placeholder="*Mạn phép được biết tên của u?">
+
+<textarea name="entry.513064915"
+placeholder="*What are u thinking about?">
+</textarea>
+
+<button type="submit">Send this</button>
+
+</form>
+
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+
+</div>
+
+</section>
+
+
+<script src="js/site.js"></script>
+
+<div id="toast"></div>
+
+<footer class="footer">
+    <p>© 2026 Phan Duy Hưng - LEOTH01O2. All rights reserved.</p>
+    <p>Mail: phan29182@gmail.com</p>
+    <p>Thanks Chatgpt for your support.</p>
+</footer>
+</body>
+</html>
