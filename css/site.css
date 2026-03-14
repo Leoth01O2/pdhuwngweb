@@ -252,7 +252,7 @@ margin-top:0;
     color: white;
     cursor: pointer;
     margin-right: 15px;
-    font-size: 16px;
+    font-size: 15px;
     transition: 0.25s;
 }
 
@@ -366,9 +366,12 @@ margin-top:0;
     transition:.25s;
 }
 
-        .gallery-grid img:hover {
-            transform: scale(1.05);
-        }
+    @media (hover:hover){
+        .gallery-grid img:hover{
+            transform:scale(1.05);
+    }
+
+}
 
 
 /* lightbox */
@@ -429,7 +432,7 @@ margin-top:0;
 
                                 /* Guestbook form css */
 
-#guestbook form {
+#sayanything form {
     max-width: 1100px;
     margin: auto;
     display: flex;
@@ -439,7 +442,7 @@ margin-top:0;
 *{
 box-sizing:border-box;
 }
-.guestbook-box {
+.sayanything-box {
     max-width: 1100px;
     margin: 60px auto;
     padding: 35px;
@@ -451,22 +454,22 @@ box-sizing:border-box;
     box-shadow: 0 8px 40px rgba(0,0,0,0.35);
 }
 
-.guestbook-box:hover{
+.sayanything-box:hover{
     border-color: rgba(77,163,255,0.35);
     box-shadow: 
         0 10px 40px rgba(0,0,0,0.45),
         0 0 25px rgba(77,163,255,0.15);
 }
 
-    .guestbook-box h2 {
+    .sayanything-box h2 {
         text-align: center;
         margin-bottom: 25px;
         color: white;
         letter-spacing: 1px;
     }
 
-    .guestbook-box input,
-    .guestbook-box textarea {
+    .sayanything-box input,
+    .sayanything-box textarea {
         width: 100%;
         padding: 14px;
         margin-bottom: 18px;
@@ -479,23 +482,23 @@ box-sizing:border-box;
         transition: 0.25s;
     }
 
-    .guestbook-box textarea {
+    .sayanything-box textarea {
         height: 120px;
         resize: none;
     }
 
-        .guestbook-box input::placeholder,
-        .guestbook-box textarea::placeholder {
+        .sayanything-box input::placeholder,
+        .sayanything-box textarea::placeholder {
             color: rgba(255,255,255,0.6);
         }
 
-        .guestbook-box input:focus,
-        .guestbook-box textarea:focus {
+        .sayanything-box input:focus,
+        .sayanything-box textarea:focus {
             border-color: #3b82f6;
             box-shadow: 0 0 12px rgba(59,130,246,0.6);
         }
 
-    .guestbook-box button {
+    .sayanything-box button {
         width: 100%;
         padding: 14px;
         border: none;
@@ -508,7 +511,7 @@ box-sizing:border-box;
         transition: 0.25s;
     }
 
-        .guestbook-box button:hover {
+        .sayanything-box button:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 18px rgba(59,130,246,0.6);
         }
@@ -595,11 +598,13 @@ box-sizing:border-box;
         grid-template-columns:repeat(2,1fr);
     }
 
-    .cursor-ring{
-        opacity:0;
+    .footer{
+        backdrop-filter:none;
     }
-    .cursor-ring{
-        transition:opacity .3s, transform .15s ease;
+
+    .cursor-ring,
+    .cursor-dot{
+        display:none;
     }
 }
 

@@ -43,7 +43,7 @@ setInterval(() => {
 
     }
 
-}, 200);
+}, 500);
 
 function toggleMusic(id, btn) {
 
@@ -59,7 +59,7 @@ function toggleMusic(id, btn) {
 
         let oldBtn = document.querySelector(".play-btn.playing");
         if (oldBtn) {
-            oldBtn.innerText = "▶";
+            oldBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
             oldBtn.classList.remove("playing");
         }
 
@@ -103,7 +103,7 @@ function toggleMusic(id, btn) {
     }
 }
 
-        btn.innerText = "⏸";
+        btn.innerHTML = '<i class="fa-solid fa-pause"></i>';
         btn.classList.add("playing");
 
         wave.style.display = "inline";
@@ -146,7 +146,7 @@ function toggleMusic(id, btn) {
 
         audio.pause();
 
-        btn.innerText = "▶";
+        btn.innerHTML = '<i class="fa-solid fa-play"></i>';
         btn.classList.remove("playing");
 
         wave.style.display = "none";
@@ -237,11 +237,12 @@ function showToast(text){
 
                     /*cursor blur glass*/
 const ring=document.querySelector(".cursor-ring");
-
+if (window.innerWidth > 768){
 document.addEventListener("mousemove",e=>{
 ring.style.left=e.clientX+"px";
 ring.style.top=e.clientY+"px";
 });
+}
 document.querySelectorAll(
 "a, button, img, input, textarea, select, form, .music-item"
 )
@@ -253,24 +254,5 @@ ring.classList.add("hover");
 el.addEventListener("mouseleave",()=>{
 ring.classList.remove("hover");
 });
-            /* Ẩn ring sau 1s không chạm */
-let hideCursorTimer;
 
-document.addEventListener("touchstart",e=>{
-
-let touch=e.touches[0];
-
-ring.style.left=touch.clientX+"px";
-ring.style.top=touch.clientY+"px";
-
-ring.style.opacity="1";
-
-/* reset timer */
-clearTimeout(hideCursorTimer);
-
-hideCursorTimer=setTimeout(()=>{
-ring.style.opacity="0";
-},250);
-
-});
 });
