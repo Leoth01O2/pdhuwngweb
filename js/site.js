@@ -1,3 +1,14 @@
+const els=document.querySelectorAll(".fade-in");
+
+window.addEventListener("scroll",()=>{
+els.forEach(el=>{
+const rect=el.getBoundingClientRect();
+if(rect.top<window.innerHeight-100){
+el.classList.add("show");
+}
+});
+});
+
 let currentAudio = null;
 
 document.addEventListener("DOMContentLoaded",function(){
@@ -163,13 +174,18 @@ function toggleMusic(id, btn) {
 }
 
                                  /* GALLERY */
-function openImage(img) {
+function openImage(img){
 
     let viewer = document.getElementById("imageViewer");
     let viewerImg = document.getElementById("viewerImg");
 
-    viewer.style.display = "flex";
-    viewerImg.src = img.src;
+    let temp = new Image();
+    temp.src = img.src;
+
+    temp.onload = function(){
+        viewerImg.src = temp.src;
+        viewer.style.display = "flex";
+    }
 
 }
 
@@ -178,6 +194,8 @@ function closeImage() {
     document.getElementById("imageViewer").style.display = "none";
 
 }
+
+document.addEventListener("touchstart",()=>{}, {passive:true});
 
                                 /* GUESTFORM */
 function checkGuestForm(){
